@@ -35,6 +35,10 @@ syntax on
 " No auto-comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+if has("gui_running")
+   set guifont=Sauce\ Code\ Powerline:h13
+endif
+
 " Center
 set so=999
 
@@ -43,6 +47,10 @@ set so=999
 
 set background=light
 colorscheme solarized
+
+if !has("gui_running")
+    colorscheme default
+endif
 
 set number
 
