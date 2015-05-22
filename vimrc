@@ -36,12 +36,17 @@ syntax on
 " No auto-comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+if has("gui_running")
+   set guifont=Sauce\ Code\ Powerline:h13
+endif
+
 " Center
 set so=999
 
 "colorscheme gruvbox
 "set bg=light
 
+let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
 
