@@ -45,12 +45,9 @@ set so=999
 "colorscheme gruvbox
 "set bg=light
 
+let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
-
-if !has("gui_running")
-    colorscheme default
-endif
 
 set number
 
