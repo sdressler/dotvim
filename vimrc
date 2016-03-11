@@ -26,6 +26,10 @@ Plugin 'embear/vim-localvimrc'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-surround'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/unite.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,18 +41,19 @@ syntax on
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 if has("gui_running")
-   set guifont=Sauce\ Code\ Powerline:h13
+   "set guifont=Sauce\ Code\ Powerline:h13
+   set guifont=Fira\ Mono:h13
 endif
 
 " Center
 set so=999
 
-"colorscheme gruvbox
-"set bg=light
+colorscheme gruvbox
+set bg=dark
 
-let g:solarized_termcolors=256
-set background=light
-colorscheme solarized
+"let g:solarized_termcolors=256
+"set background=light
+"colorscheme solarized
 
 set number
 
@@ -72,6 +77,7 @@ au BufNewFile,BufRead *.sv set filetype=verilog
 
 " YCM
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_always_populate_location_list = 1
 
 "Tagbar
 let g:tagbar_width=50
@@ -92,4 +98,10 @@ let g:gitgutter_sign_column_always = 1
 inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
 nnoremap O Ox<BS>
+
+"
+set cole=0 
+au FileType * setl cole=0 
+
+set hlsearch
 
