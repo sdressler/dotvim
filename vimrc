@@ -30,6 +30,10 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'nachumk/systemverilog.vim'
+Plugin 'vhda/verilog_systemverilog.vim'
+Plugin 'kshenoy/vim-signature'
+Plugin 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,10 +78,12 @@ let mapleader=","
 set colorcolumn=120
 
 au BufNewFile,BufRead *.sv set filetype=verilog
+au BufNewFile,BufRead *.cl set filetype=cpp
 
 " YCM
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_always_populate_location_list = 1
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
 "Tagbar
 let g:tagbar_width=50
@@ -104,4 +110,7 @@ set cole=0
 au FileType * setl cole=0 
 
 set hlsearch
+
+" SysV FT
+autocmd BufRead,BufNewFile *.sv setlocal filetype=systemverilog
 
