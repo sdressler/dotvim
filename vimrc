@@ -30,14 +30,17 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'nachumk/systemverilog.vim'
+"Plugin 'nachumk/systemverilog.vim'
 Plugin 'vhda/verilog_systemverilog.vim'
 Plugin 'kshenoy/vim-signature'
 Plugin 'rizzatti/dash.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
 Plugin 'mtth/scratch.vim'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'neomake/neomake'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +62,8 @@ set so=999
 
 colorscheme gruvbox
 set bg=dark
+
+set linebreak
 
 "let g:solarized_termcolors=256
 "set background=light
